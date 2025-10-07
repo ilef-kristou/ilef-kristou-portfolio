@@ -8,40 +8,40 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 17% 7%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 98%;
+    --foreground: 222 47% 11%;
 
-    --card: 222 13% 11%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
 
-    --popover: 222 13% 11%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 263 70% 65%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 270 80% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 222 13% 16%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 222 13% 16%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 238 75% 62%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 270 80% 60%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 222 13% 20%;
-    --input: 222 13% 20%;
-    --ring: 263 70% 65%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 270 80% 60%;
 
     --radius: 0.75rem;
 
     /* Custom portfolio colors */
-    --gradient-start: 263 70% 65%;
-    --gradient-end: 238 75% 62%;
-    --hero-glow: 263 70% 65%;
+    --gradient-start: 270 80% 60%;
+    --gradient-end: 320 85% 65%;
+    --hero-glow: 270 80% 60%;
   }
 
   * {
@@ -105,7 +105,7 @@ All colors MUST be HSL.
 
   /* Glass morphism */
   .glass {
-    @apply bg-card/50 backdrop-blur-xl border border-border/50;
+    @apply bg-white/80 backdrop-blur-xl border border-border shadow-sm;
   }
 }
 

@@ -5,32 +5,32 @@ const SkillsSection = () => {
     {
       title: "Frontend",
       skills: ["Angular", "React.js", "HTML", "CSS", "JavaScript", "TypeScript"],
-      color: "from-purple-500 to-pink-500",
+      color: "from-purple-400 to-pink-400",
     },
     {
       title: "Backend",
       skills: ["Spring Boot", "Laravel", "Nest.js", "Node.js"],
-      color: "from-blue-500 to-cyan-500",
+      color: "from-blue-400 to-cyan-400",
     },
     {
       title: "Languages",
       skills: ["Java", "Python", "C", "C++", "R"],
-      color: "from-green-500 to-emerald-500",
+      color: "from-green-400 to-emerald-400",
     },
     {
       title: "Databases",
       skills: ["MySQL", "MongoDB"],
-      color: "from-orange-500 to-red-500",
+      color: "from-orange-400 to-red-400",
     },
     {
       title: "Tools & Cloud",
       skills: ["Git", "GitHub", "GitLab", "AWS", "Postman", "JIRA"],
-      color: "from-indigo-500 to-purple-500",
+      color: "from-indigo-400 to-purple-400",
     },
     {
       title: "Methodologies",
       skills: ["Scrum", "Agile"],
-      color: "from-pink-500 to-rose-500",
+      color: "from-pink-400 to-rose-400",
     },
   ];
 
@@ -50,7 +50,7 @@ const SkillsSection = () => {
           {skillCategories.map((category, index) => (
             <Card
               key={index}
-              className="glass p-6 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 animate-slide-up"
+              className="bg-white border-border p-6 hover:border-primary/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="mb-4">
