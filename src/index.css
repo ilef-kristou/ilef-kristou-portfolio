@@ -8,40 +8,40 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 222 47% 11%;
+    --background: 0 0% 96%;
+    --foreground: 0 0% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 0 0% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 0 0% 20%;
 
-    --primary: 270 80% 60%;
+    --primary: 345 100% 25%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 20%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 270 80% 60%;
+    --accent: 345 100% 25%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 270 80% 60%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 345 100% 25%;
 
     --radius: 0.75rem;
 
     /* Custom portfolio colors */
-    --gradient-start: 270 80% 60%;
-    --gradient-end: 320 85% 65%;
-    --hero-glow: 270 80% 60%;
+    --gradient-start: 345 100% 25%;
+    --gradient-end: 345 100% 35%;
+    --hero-glow: 345 100% 25%;
   }
 
   * {
