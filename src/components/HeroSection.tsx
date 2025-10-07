@@ -1,7 +1,6 @@
 import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profilePhoto from "@/assets/profile-photo.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   const scrollToSection = (id: string) => {
@@ -14,18 +13,8 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
-      style={{
-        backgroundImage: `url(${heroBg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 bg-background"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background"></div>
-      
-      {/* Animated glow effects */}
-      <div className="absolute top-20 left-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-glow"></div>
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-glow" style={{ animationDelay: "1s" }}></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
