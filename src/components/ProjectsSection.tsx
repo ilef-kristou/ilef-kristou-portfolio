@@ -1,9 +1,16 @@
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import projectReservation from "@/assets/project-reservation.jpg";
 import projectAws from "@/assets/project-aws.jpg";
 import projectMl from "@/assets/project-ml.jpg";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const ProjectsSection = () => {
   const projects = [
@@ -14,7 +21,7 @@ const ProjectsSection = () => {
         "A comprehensive web application featuring multi-user management, rating system, and secure authentication. Built with modern technologies for optimal performance and user experience.",
       technologies: ["Angular", "Spring Boot", "Spring Security", "JWT", "MySQL"],
       github: "https://github.com/ilef-kristou",
-      image: projectReservation,
+      images: [projectReservation, projectReservation, projectReservation],
     },
     {
       title: "AWS 3-Tier Cloud Architecture",
@@ -23,7 +30,7 @@ const ProjectsSection = () => {
         "Designed and deployed a secure, scalable cloud infrastructure on AWS. Implemented VPC, EC2, RDS, S3, and CloudWatch with load balancing and auto-scaling for high availability.",
       technologies: ["AWS", "VPC", "EC2", "RDS", "S3", "CloudWatch", "Load Balancing"],
       github: "https://github.com/ilef-kristou",
-      image: projectAws,
+      images: [projectAws, projectAws, projectAws],
     },
     {
       title: "Anomaly Detection & Multi-Class Classification",
@@ -32,7 +39,7 @@ const ProjectsSection = () => {
         "Developed an advanced machine learning model using autoencoders for anomaly detection and clustering. Implemented with TensorFlow/Keras and Scikit-learn for robust performance.",
       technologies: ["Python", "TensorFlow", "Keras", "Scikit-learn", "Data Science"],
       github: "https://github.com/ilef-kristou",
-      image: projectMl,
+      images: [projectMl, projectMl, projectMl],
     },
   ];
 
@@ -62,27 +69,38 @@ const ProjectsSection = () => {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className={`grid lg:grid-cols-2 gap-0 items-stretch ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
-                {/* Image Section */}
-                <div className={`relative overflow-hidden min-h-[300px] lg:min-h-[400px] ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
+                {/* Carousel Section */}
+                <div className={`relative overflow-hidden min-h-[300px] lg:min-h-[400px] bg-secondary/30 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                  <Carousel className="w-full h-full">
+                    <CarouselContent>
+                      {project.images.map((image, imgIndex) => (
+                        <CarouselItem key={imgIndex}>
+                          <div className="relative w-full h-[300px] lg:h-[400px]">
+                            <img
+                              src={image}
+                              alt={`${project.title} - Image ${imgIndex + 1}`}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="left-4" />
+                    <CarouselNext className="right-4" />
+                  </Carousel>
                   <div className="absolute top-4 right-4 bg-primary/90 backdrop-blur-sm px-4 py-2 rounded-full z-20">
                     <span className="text-white font-bold text-sm">{project.year}</span>
                   </div>
                 </div>
 
                 {/* Content Section */}
-                <div className={`p-8 lg:p-12 space-y-6 bg-gradient-to-br from-primary via-primary to-primary/90 ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
+                <div className={`p-8 lg:p-12 space-y-6 bg-card ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
                   <div className="space-y-4">
-                    <h3 className="text-3xl font-bold text-white group-hover:text-accent transition-colors duration-300">
+                    <h3 className="text-3xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                       {project.title}
                     </h3>
                     
-                    <p className="text-white/90 text-lg leading-relaxed">
+                    <p className="text-foreground/80 text-lg leading-relaxed">
                       {project.description}
                     </p>
                   </div>
@@ -91,7 +109,7 @@ const ProjectsSection = () => {
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium border border-white/20 hover:bg-white/20 transition-all duration-300 animate-slide-in-left"
+                        className="px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium border border-border hover:bg-accent transition-all duration-300 animate-slide-in-left"
                         style={{ animationDelay: `${index * 0.2 + techIndex * 0.05}s` }}
                       >
                         {tech}
@@ -103,7 +121,7 @@ const ProjectsSection = () => {
                     <Button
                       variant="outline"
                       size="lg"
-                      className="flex-1 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-primary transition-all duration-300 group/btn"
+                      className="flex-1 border-primary/50 hover:bg-primary/10 group/btn"
                       asChild
                     >
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
@@ -113,7 +131,7 @@ const ProjectsSection = () => {
                     </Button>
                     <Button
                       size="lg"
-                      className="flex-1 bg-white text-primary hover:bg-white/90 transition-all duration-300 group/btn"
+                      className="flex-1 bg-gradient-primary hover:opacity-90 transition-all duration-300 group/btn"
                     >
                       <ExternalLink size={20} className="mr-2 group-hover/btn:translate-x-1 transition-transform" />
                       Live Demo
