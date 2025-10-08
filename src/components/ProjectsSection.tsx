@@ -27,7 +27,7 @@ const ProjectsSection = () => {
       title: "AWS 3-Tier Cloud Architecture",
       year: "2024",
       description:
-        "Designed and deployed a secure, scalable cloud infrastructure on AWS. Implemented VPC, EC2, RDS, S3, and CloudWatch with load balancing and auto-scaling for high availability.",
+        "Created and deployed a complete 3-tier AWS architecture (frontend, backend, database) with containerization refactoring. Implemented VPC with public/private subnets across multiple AZs, Internet Gateway, NAT Gateways, Route 53 DNS management. Configured security groups, bastion host, SSL certificates via ACM. Deployed Application Load Balancers with Auto Scaling groups, multi-AZ RDS with automated backups, S3 bucket with CloudFront distribution for static assets, and CloudWatch monitoring for performance metrics.",
       technologies: ["AWS", "VPC", "EC2", "RDS", "S3", "CloudWatch", "Load Balancing"],
       github: "https://github.com/ilef-kristou",
       images: [projectAws, projectAws, projectAws],
@@ -36,7 +36,7 @@ const ProjectsSection = () => {
       title: "Anomaly Detection & Multi-Class Classification",
       year: "2024",
       description:
-        "Developed an advanced machine learning model using autoencoders for anomaly detection and clustering. Implemented with TensorFlow/Keras and Scikit-learn for robust performance.",
+        "Developed a deep learning system for automatic anomaly detection and multi-category classification in images. Combined convolutional autoencoder trained on normal images for anomaly detection with latent space extraction and clustering (PCA + KMeans) for multi-class classification. Implemented complete pipeline including data preparation and augmentation, model training, performance evaluation (MSE, confusion matrix, ARI, Silhouette), and latent space visualization with t-SNE. Built with Python, TensorFlow/Keras, NumPy, Matplotlib, and Scikit-learn.",
       technologies: ["Python", "TensorFlow", "Keras", "Scikit-learn", "Data Science"],
       github: "https://github.com/ilef-kristou",
       images: [projectMl, projectMl, projectMl],

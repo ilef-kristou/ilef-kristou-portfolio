@@ -8,7 +8,7 @@ const ExperienceSection = () => {
       company: "TAC-TIC",
       period: "Jul - Aug 2025",
       description:
-        "Developed a full-stack web application for managing a training center using React.js, Laravel, and MySQL. Implemented multi-role authentication, dynamic dashboards, and scheduling features with a focus on user experience and performance.",
+        "Developed a comprehensive training center management web application to optimize operations through a centralized platform. Built administrative dashboard with key statistics, secure multi-role authentication system (administrator, training manager, trainer, participant), complete training lifecycle management (creation, modification, deletion, trainer assignment, session scheduling), online participant registration with validation workflow, resource management system, and room/schedule management with capacity tracking and availability verification.",
       technologies: ["React.js", "Laravel", "MySQL", "Authentication", "Dashboards"],
     },
     {
