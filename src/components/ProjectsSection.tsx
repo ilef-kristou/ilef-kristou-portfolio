@@ -1,6 +1,4 @@
-import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import projectReservation from "@/assets/project-reservation.jpg";
 import projectAws from "@/assets/project-aws.jpg";
 import projectMl from "@/assets/project-ml.jpg";
@@ -17,8 +15,13 @@ const ProjectsSection = () => {
     {
       title: "Online Reservation System",
       year: "2024",
-      description:
-        "A comprehensive web application featuring multi-user management, rating system, and secure authentication. Built with modern technologies for optimal performance and user experience.",
+      features: [
+        "Multi-user management with role-based access control",
+        "Rating and review system for user feedback",
+        "Secure authentication using JWT tokens",
+        "Built with Angular frontend and Spring Boot backend",
+        "MySQL database for efficient data management",
+      ],
       technologies: ["Angular", "Spring Boot", "Spring Security", "JWT", "MySQL"],
       github: "https://github.com/ilef-kristou",
       images: [projectReservation, projectReservation, projectReservation],
@@ -26,8 +29,16 @@ const ProjectsSection = () => {
     {
       title: "AWS 3-Tier Cloud Architecture",
       year: "2024",
-      description:
-        "Created and deployed a complete 3-tier AWS architecture (frontend, backend, database) with containerization refactoring. Implemented VPC with public/private subnets across multiple AZs, Internet Gateway, NAT Gateways, Route 53 DNS management. Configured security groups, bastion host, SSL certificates via ACM. Deployed Application Load Balancers with Auto Scaling groups, multi-AZ RDS with automated backups, S3 bucket with CloudFront distribution for static assets, and CloudWatch monitoring for performance metrics.",
+      features: [
+        "Complete 3-tier architecture (frontend, backend, database) with containerization",
+        "VPC with public/private subnets across multiple availability zones",
+        "Internet Gateway, NAT Gateways, and Route 53 DNS management",
+        "Security groups, bastion host, and SSL certificates via ACM",
+        "Application Load Balancers with Auto Scaling groups",
+        "Multi-AZ RDS with automated backups",
+        "S3 bucket with CloudFront distribution for static assets",
+        "CloudWatch monitoring for performance metrics",
+      ],
       technologies: ["AWS", "VPC", "EC2", "RDS", "S3", "CloudWatch", "Load Balancing"],
       github: "https://github.com/ilef-kristou",
       images: [projectAws, projectAws, projectAws],
@@ -35,8 +46,15 @@ const ProjectsSection = () => {
     {
       title: "Anomaly Detection & Multi-Class Classification",
       year: "2024",
-      description:
-        "Developed a deep learning system for automatic anomaly detection and multi-category classification in images. Combined convolutional autoencoder trained on normal images for anomaly detection with latent space extraction and clustering (PCA + KMeans) for multi-class classification. Implemented complete pipeline including data preparation and augmentation, model training, performance evaluation (MSE, confusion matrix, ARI, Silhouette), and latent space visualization with t-SNE. Built with Python, TensorFlow/Keras, NumPy, Matplotlib, and Scikit-learn.",
+      features: [
+        "Deep learning system for automatic anomaly detection in images",
+        "Convolutional autoencoder trained on normal images",
+        "Latent space extraction and clustering (PCA + KMeans)",
+        "Complete pipeline: data preparation, augmentation, training",
+        "Performance evaluation: MSE, confusion matrix, ARI, Silhouette",
+        "Latent space visualization with t-SNE",
+        "Built with Python, TensorFlow/Keras, NumPy, Matplotlib, Scikit-learn",
+      ],
       technologies: ["Python", "TensorFlow", "Keras", "Scikit-learn", "Data Science"],
       github: "https://github.com/ilef-kristou",
       images: [projectMl, projectMl, projectMl],
@@ -48,7 +66,7 @@ const ProjectsSection = () => {
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -96,46 +114,34 @@ const ProjectsSection = () => {
                 {/* Content Section */}
                 <div className={`p-8 lg:p-12 space-y-6 bg-card ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
                   <div className="space-y-4">
-                    <h3 className="text-3xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                    <h3 className="text-3xl font-bold text-foreground group-hover:text-primary transition-colors duration-300 animate-slide-up">
                       {project.title}
                     </h3>
                     
-                    <p className="text-foreground/80 text-lg leading-relaxed">
-                      {project.description}
-                    </p>
+                    <ul className="space-y-3 text-foreground/80 text-base leading-relaxed">
+                      {project.features.map((feature, featureIndex) => (
+                        <li 
+                          key={featureIndex} 
+                          className="flex items-start gap-2 animate-slide-in-left"
+                          style={{ animationDelay: `${index * 0.2 + featureIndex * 0.1}s` }}
+                        >
+                          <span className="text-primary mt-1">•</span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
 
                   <div className="flex flex-wrap gap-3">
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium border border-border hover:bg-accent transition-all duration-300 animate-slide-in-left"
+                        className="px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium border border-border hover:bg-accent hover:scale-105 transition-all duration-300 animate-scale-in"
                         style={{ animationDelay: `${index * 0.2 + techIndex * 0.05}s` }}
                       >
                         {tech}
                       </span>
                     ))}
-                  </div>
-
-                  <div className="flex gap-4 pt-4">
-                    <Button
-                      variant="outline"
-                      size="lg"
-                      className="flex-1 border-primary/50 hover:bg-primary/10 group/btn"
-                      asChild
-                    >
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github size={20} className="mr-2 group-hover/btn:rotate-12 transition-transform" />
-                        View Code
-                      </a>
-                    </Button>
-                    <Button
-                      size="lg"
-                      className="flex-1 bg-gradient-primary hover:opacity-90 transition-all duration-300 group/btn"
-                    >
-                      <ExternalLink size={20} className="mr-2 group-hover/btn:translate-x-1 transition-transform" />
-                      Live Demo
-                    </Button>
                   </div>
                 </div>
               </div>
