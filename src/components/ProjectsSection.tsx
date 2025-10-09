@@ -15,22 +15,21 @@ const ProjectsSection = () => {
     {
       title: "Online Reservation System",
       year: "2024",
+      description: "A comprehensive web application designed to streamline the reservation process with multi-user capabilities, featuring robust authentication and an intuitive rating system for enhanced user experience.",
       features: [
         "Multi-user management with role-based access control",
         "Rating and review system for user feedback",
         "Secure authentication using JWT tokens",
-        "Built with Angular frontend and Spring Boot backend",
         "MySQL database for efficient data management",
       ],
       technologies: ["Angular", "Spring Boot", "Spring Security", "JWT", "MySQL"],
-      github: "https://github.com/ilef-kristou",
       images: [projectReservation, projectReservation, projectReservation],
     },
     {
       title: "AWS 3-Tier Cloud Architecture",
       year: "2024",
+      description: "Complete enterprise-grade cloud infrastructure deployment on AWS, implementing best practices for security, high availability, scalability, and DNS management across multiple availability zones.",
       features: [
-        "Complete 3-tier architecture (frontend, backend, database) with containerization",
         "VPC with public/private subnets across multiple availability zones",
         "Internet Gateway, NAT Gateways, and Route 53 DNS management",
         "Security groups, bastion host, and SSL certificates via ACM",
@@ -39,24 +38,21 @@ const ProjectsSection = () => {
         "S3 bucket with CloudFront distribution for static assets",
         "CloudWatch monitoring for performance metrics",
       ],
-      technologies: ["AWS", "VPC", "EC2", "RDS", "S3", "CloudWatch", "Load Balancing"],
-      github: "https://github.com/ilef-kristou",
+      technologies: ["AWS", "VPC", "EC2", "RDS", "S3", "CloudWatch", "Load Balancing", "Route 53"],
       images: [projectAws, projectAws, projectAws],
     },
     {
       title: "Anomaly Detection & Multi-Class Classification",
       year: "2024",
+      description: "Advanced deep learning system combining anomaly detection and multi-class classification using convolutional autoencoders, achieving effective anomaly identification and category clustering in image datasets.",
       features: [
-        "Deep learning system for automatic anomaly detection in images",
-        "Convolutional autoencoder trained on normal images",
-        "Latent space extraction and clustering (PCA + KMeans)",
-        "Complete pipeline: data preparation, augmentation, training",
+        "Convolutional autoencoder trained on normal images for anomaly detection",
+        "Latent space extraction and clustering using PCA + KMeans",
+        "Complete pipeline: data preparation, augmentation, and training",
         "Performance evaluation: MSE, confusion matrix, ARI, Silhouette",
         "Latent space visualization with t-SNE",
-        "Built with Python, TensorFlow/Keras, NumPy, Matplotlib, Scikit-learn",
       ],
-      technologies: ["Python", "TensorFlow", "Keras", "Scikit-learn", "Data Science"],
-      github: "https://github.com/ilef-kristou",
+      technologies: ["Python", "TensorFlow", "Keras", "Scikit-learn", "NumPy", "Matplotlib"],
       images: [projectMl, projectMl, projectMl],
     },
   ];
@@ -106,42 +102,58 @@ const ProjectsSection = () => {
                     <CarouselPrevious className="left-4" />
                     <CarouselNext className="right-4" />
                   </Carousel>
-                  <div className="absolute top-4 right-4 bg-primary/90 backdrop-blur-sm px-4 py-2 rounded-full z-20">
+                  <div className="absolute top-4 right-4 bg-primary backdrop-blur-sm px-4 py-2 rounded-full z-20">
                     <span className="text-white font-bold text-sm">{project.year}</span>
                   </div>
                 </div>
 
                 {/* Content Section */}
-                <div className={`p-8 lg:p-12 space-y-6 bg-card ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                  <div className="space-y-4">
-                    <h3 className="text-3xl font-bold text-foreground group-hover:text-primary transition-colors duration-300 animate-slide-up">
+                <div className={`p-8 lg:p-12 space-y-8 bg-card ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
+                  <div className="space-y-6">
+                    <h3 className="text-3xl font-bold group-hover:text-primary transition-colors duration-300 animate-slide-up">
                       {project.title}
                     </h3>
                     
-                    <ul className="space-y-3 text-foreground/80 text-base leading-relaxed">
-                      {project.features.map((feature, featureIndex) => (
-                        <li 
-                          key={featureIndex} 
-                          className="flex items-start gap-2 animate-slide-in-left"
-                          style={{ animationDelay: `${index * 0.2 + featureIndex * 0.1}s` }}
-                        >
-                          <span className="text-primary mt-1">•</span>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <p className="text-foreground/70 text-base leading-relaxed animate-fade-in">
+                      {project.description}
+                    </p>
+
+                    <div className="space-y-3">
+                      <h4 className="text-lg font-semibold text-primary flex items-center gap-2">
+                        <span className="w-1 h-6 bg-primary rounded-full"></span>
+                        Key Features
+                      </h4>
+                      <ul className="space-y-2.5 ml-4">
+                        {project.features.map((feature, featureIndex) => (
+                          <li 
+                            key={featureIndex} 
+                            className="flex items-start gap-3 text-foreground/80 text-sm leading-relaxed animate-slide-in-left"
+                            style={{ animationDelay: `${index * 0.2 + featureIndex * 0.1}s` }}
+                          >
+                            <span className="text-primary mt-0.5 text-lg">▸</span>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
 
-                  <div className="flex flex-wrap gap-3">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-4 py-2 rounded-full bg-secondary text-foreground text-sm font-medium border border-border hover:bg-accent hover:scale-105 transition-all duration-300 animate-scale-in"
-                        style={{ animationDelay: `${index * 0.2 + techIndex * 0.05}s` }}
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                  <div className="space-y-3 pt-4 border-t border-border/50">
+                    <h4 className="text-sm font-semibold text-primary uppercase tracking-wider flex items-center gap-2">
+                      <span className="w-6 h-0.5 bg-primary"></span>
+                      Technologies Used
+                    </h4>
+                    <div className="flex flex-wrap gap-2.5">
+                      {project.technologies.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="px-4 py-2 rounded-lg bg-primary/10 text-primary text-sm font-medium border border-primary/30 hover:bg-primary/20 hover:border-primary/50 hover:scale-105 transition-all duration-300 animate-scale-in"
+                          style={{ animationDelay: `${index * 0.2 + techIndex * 0.05}s` }}
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
