@@ -53,11 +53,11 @@ const ExperienceSection = () => {
           {experiences.map((exp, index) => (
             <Card
               key={index}
-              className="glass p-8 hover:border-primary/50 transition-all duration-300 animate-slide-up"
+              className="glass p-8 hover:border-primary/50 transition-all duration-300 animate-slide-up hover:scale-105 hover-lift hover-glow"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex flex-col md:flex-row gap-6">
-                <div className="w-16 h-16 rounded-xl bg-primary flex items-center justify-center flex-shrink-0">
+                <div className="w-16 h-16 rounded-xl bg-primary flex items-center justify-center flex-shrink-0 animate-pulse-glow">
                   <Briefcase className="text-white" size={28} />
                 </div>
 
@@ -84,7 +84,8 @@ const ExperienceSection = () => {
                       {exp.features.map((feature, featureIndex) => (
                         <li 
                           key={featureIndex} 
-                          className="flex items-start gap-3 text-foreground/80 text-sm leading-relaxed"
+                          className="flex items-start gap-3 text-foreground/80 text-sm leading-relaxed animate-fade-in"
+                          style={{ animationDelay: `${index * 0.1 + featureIndex * 0.05}s` }}
                         >
                           <span className="text-primary mt-0.5">▸</span>
                           <span>{feature}</span>
@@ -102,7 +103,8 @@ const ExperienceSection = () => {
                       {exp.technologies.map((tech, techIndex) => (
                         <span
                           key={techIndex}
-                          className="px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-sm font-medium border border-primary/30 hover:bg-primary/20 hover:border-primary/50 hover:scale-105 transition-all duration-300"
+                          className="px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-sm font-medium border border-primary/30 hover:bg-primary/20 hover:border-primary/50 hover:scale-105 transition-all duration-300 animate-scale-in"
+                          style={{ animationDelay: `${index * 0.1 + techIndex * 0.05}s` }}
                         >
                           {tech}
                         </span>

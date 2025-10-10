@@ -63,7 +63,7 @@ const ContactSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* Contact Information */}
-          <div className="space-y-6 animate-slide-up">
+          <div className="space-y-6 animate-slide-up animate-slide-in-left">
             <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
             {contactInfo.map((info, index) => (
               <a
@@ -73,7 +73,9 @@ const ContactSection = () => {
                 rel={info.link.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="block"
               >
-                <Card className="glass p-4 hover:border-primary/50 transition-all duration-300 hover:translate-x-2">
+                <Card className="glass p-4 hover:border-primary/50 transition-all duration-300 hover:translate-x-2 hover:scale-105 hover-glow animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+                >
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <info.icon className="text-primary" size={20} />
@@ -89,8 +91,8 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            <Card className="glass p-8">
+          <div className="animate-slide-up animate-scale-in" style={{ animationDelay: "0.2s" }}>
+            <Card className="glass p-8 hover-lift hover-glow">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -137,7 +139,7 @@ const ContactSection = () => {
 
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-primary hover:opacity-90 transition-opacity"
+                  className="w-full bg-gradient-primary hover:opacity-90 transition-all hover:scale-105 hover-glow"
                   size="lg"
                 >
                   <Send size={18} className="mr-2" />

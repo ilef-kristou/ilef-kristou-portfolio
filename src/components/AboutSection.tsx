@@ -38,8 +38,8 @@ const AboutSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Bio */}
-          <div className="space-y-6 animate-slide-up">
-            <Card className="glass p-8 border-border/50">
+          <div className="space-y-6 animate-slide-up animate-fade-in">
+            <Card className="glass p-8 border-border/50 hover-lift hover-glow">
               <h3 className="text-2xl font-bold mb-4 gradient-text">My Journey</h3>
               <p className="text-foreground/80 leading-relaxed">
                 Final-year Software Engineering student at the Faculty of Sciences of Tunis, 
@@ -61,12 +61,13 @@ const AboutSection = () => {
           </div>
 
           {/* Education Timeline */}
-          <div className="space-y-6 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+          <div className="space-y-6 animate-slide-up animate-slide-in-right" style={{ animationDelay: "0.2s" }}>
             <h3 className="text-2xl font-bold mb-6">Education</h3>
             {education.map((edu, index) => (
               <Card
                 key={index}
-                className="glass p-6 border-l-4 border-primary hover:border-accent transition-all duration-300 hover:translate-x-2"
+                className="glass p-6 border-l-4 border-primary hover:border-accent transition-all duration-300 hover:translate-x-2 hover:scale-105 hover-glow animate-scale-in"
+                style={{ animationDelay: `${index * 0.15}s` }}
               >
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">

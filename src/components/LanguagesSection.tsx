@@ -31,7 +31,7 @@ const LanguagesSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 animate-slide-up">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Globe className="w-10 h-10 text-primary animate-pulse" />
+            <Globe className="w-10 h-10 text-primary animate-pulse animate-rotate-slow" />
             <h2 className="text-4xl md:text-5xl font-bold">
               <span className="gradient-text">Languages</span>
             </h2>
@@ -45,7 +45,7 @@ const LanguagesSection = () => {
           {languages.map((language, index) => (
             <Card
               key={index}
-              className="glass p-8 border-border hover:border-primary/50 transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 animate-scale-in hover:scale-105 group"
+              className="glass p-8 border-border hover:border-primary/50 transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 animate-scale-in hover:scale-105 group hover-lift hover-glow"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="space-y-6">

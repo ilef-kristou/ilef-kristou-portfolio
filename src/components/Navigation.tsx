@@ -38,7 +38,7 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center text-lg font-bold">
+          <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center text-lg font-bold animate-pulse-glow">
             IK
           </div>
           <span className="text-xl font-bold">Ilef Kristou</span>
@@ -50,14 +50,14 @@ const Navigation = () => {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="text-foreground/80 hover:text-primary transition-colors duration-200 font-medium"
+              className="text-foreground/80 hover:text-primary transition-all duration-200 font-medium hover:scale-110"
             >
               {item.label}
             </button>
           ))}
           <Button
             onClick={() => scrollToSection("contact")}
-            className="bg-gradient-primary hover:opacity-90 transition-opacity"
+            className="bg-gradient-primary hover:opacity-90 transition-all hover:scale-105 animate-pulse-glow"
           >
             Contact
           </Button>

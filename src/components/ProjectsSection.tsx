@@ -79,7 +79,7 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="glass border-border overflow-hidden hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 animate-scale-in group"
+              className="glass border-border overflow-hidden hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 animate-scale-in group hover:-translate-y-2 hover-glow"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className={`grid lg:grid-cols-2 gap-0 items-stretch ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
@@ -102,7 +102,7 @@ const ProjectsSection = () => {
                     <CarouselPrevious className="left-4" />
                     <CarouselNext className="right-4" />
                   </Carousel>
-                  <div className="absolute top-4 right-4 bg-primary backdrop-blur-sm px-4 py-2 rounded-full z-20">
+                  <div className="absolute top-4 right-4 bg-primary backdrop-blur-sm px-4 py-2 rounded-full z-20 animate-bounce-subtle">
                     <span className="text-white font-bold text-sm">{project.year}</span>
                   </div>
                 </div>

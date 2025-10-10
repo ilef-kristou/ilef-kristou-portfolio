@@ -50,7 +50,7 @@ const SkillsSection = () => {
           {skillCategories.map((category, index) => (
             <Card
               key={index}
-              className="bg-white border-border p-6 hover:border-primary/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-slide-up"
+              className="glass p-6 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 hover:scale-105 animate-slide-up animate-pulse-glow"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="mb-4">
