@@ -42,20 +42,16 @@ const AboutSection = () => {
             <Card className="glass p-8 border-border/50 hover-lift hover-glow">
               <h3 className="text-2xl font-bold mb-4 gradient-text">My Journey</h3>
               <p className="text-foreground/80 leading-relaxed">
-                Final-year Software Engineering student at the Faculty of Sciences of Tunis, 
-                passionate about full-stack development, with a strong interest in cloud 
-                computing and AI.
+                🎓 Final-year Software Engineering student, I am passionate about creating innovative software solutions, with a keen interest in full-stack web development, cloud computing, and artificial intelligence.
               </p>
               <p className="text-foreground/80 leading-relaxed mt-4">
-                Experienced in designing modern web applications with Angular, React.js, 
-                and Spring Boot. Curious, motivated, and dynamic, I am actively seeking 
-                professional opportunities to leverage my skills while continuing to grow.
+                🚀 At Optima Junior Enterprise, I contributed to real-world projects for clients, strengthening my skills in software development, agile project management, and client communication. These experiences allowed me to take on responsibilities and collaborate effectively within dynamic teams.
               </p>
               <p className="text-foreground/80 leading-relaxed mt-4">
-                I thrive on solving complex problems and building scalable solutions 
-                that make a real impact. Whether it's architecting cloud infrastructure 
-                or developing AI-powered applications, I'm always eager to learn and 
-                push the boundaries of what's possible.
+                💡 My academic projects gave me the opportunity to consolidate my knowledge in software design, databases, and development best practices, while implementing these skills on various projects. I have thus acquired a comprehensive view of the software development lifecycle and a solid ability to produce reliable and high-performance solutions.
+              </p>
+              <p className="text-foreground/80 leading-relaxed mt-4">
+                🔍 Curious, rigorous, and constantly on the lookout for new technologies, I am seeking an end-of-studies internship that will allow me to apply my skills and deepen my expertise in software engineering.
               </p>
             </Card>
           </div>
