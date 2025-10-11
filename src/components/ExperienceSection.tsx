@@ -12,6 +12,31 @@ import trainingManagement from "@/assets/training-management.jpg";
 import trainingAuth from "@/assets/training-auth.jpg";
 import dbSyncInterface from "@/assets/db-sync-interface.jpg";
 import dbSyncMonitoring from "@/assets/db-sync-monitoring.jpg";
+import { 
+  Code2, 
+  Server, 
+  Database, 
+  Shield, 
+  FileJson, 
+  LayoutDashboard,
+  Coffee,
+  Globe,
+  Lock,
+  GitBranch
+} from "lucide-react";
+
+const getTechIcon = (tech: string) => {
+  const techLower = tech.toLowerCase();
+  if (techLower.includes('react') || techLower.includes('angular') || techLower.includes('html') || techLower.includes('css')) return Code2;
+  if (techLower.includes('laravel') || techLower.includes('spring') || techLower.includes('nest') || techLower.includes('node')) return Server;
+  if (techLower.includes('mysql') || techLower.includes('mongodb') || techLower.includes('database') || techLower.includes('jdbc')) return Database;
+  if (techLower.includes('auth') || techLower.includes('security')) return Shield;
+  if (techLower.includes('api') || techLower.includes('rest') || techLower.includes('web service')) return FileJson;
+  if (techLower.includes('dashboard')) return LayoutDashboard;
+  if (techLower.includes('java')) return Coffee;
+  if (techLower.includes('synchronization')) return GitBranch;
+  return Globe;
+};
 
 const ExperienceSection = () => {
   const experiences = [
@@ -156,15 +181,19 @@ const ExperienceSection = () => {
                       Technologies Used
                     </h4>
                     <div className="flex flex-wrap gap-2">
-                      {exp.technologies.map((tech, techIndex) => (
-                        <span
-                          key={techIndex}
-                          className="px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-sm font-medium border border-primary/30 hover:bg-primary/20 hover:border-primary/50 hover:scale-105 transition-all duration-300 animate-scale-in"
-                          style={{ animationDelay: `${index * 0.1 + techIndex * 0.05}s` }}
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                      {exp.technologies.map((tech, techIndex) => {
+                        const IconComponent = getTechIcon(tech);
+                        return (
+                          <span
+                            key={techIndex}
+                            className="px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-sm font-medium border border-primary/30 hover:bg-primary/20 hover:border-primary/50 hover:scale-105 transition-all duration-300 animate-scale-in flex items-center gap-1.5"
+                            style={{ animationDelay: `${index * 0.1 + techIndex * 0.05}s` }}
+                          >
+                            <IconComponent className="w-3.5 h-3.5" />
+                            {tech}
+                          </span>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>

@@ -9,6 +9,40 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { 
+  Code2, 
+  Server, 
+  Database, 
+  Shield, 
+  Key,
+  Cloud,
+  Network,
+  HardDrive,
+  Activity,
+  Globe,
+  Lock,
+  BarChart3,
+  Brain,
+  FileJson,
+  ImageIcon
+} from "lucide-react";
+
+const getTechIcon = (tech: string) => {
+  const techLower = tech.toLowerCase();
+  if (techLower.includes('angular') || techLower.includes('react')) return Code2;
+  if (techLower.includes('spring') || techLower.includes('boot')) return Server;
+  if (techLower.includes('security')) return Shield;
+  if (techLower.includes('jwt')) return Key;
+  if (techLower.includes('mysql') || techLower.includes('rds')) return Database;
+  if (techLower.includes('aws') || techLower.includes('cloud')) return Cloud;
+  if (techLower.includes('vpc') || techLower.includes('load balancing') || techLower.includes('route')) return Network;
+  if (techLower.includes('ec2') || techLower.includes('s3')) return HardDrive;
+  if (techLower.includes('cloudwatch')) return Activity;
+  if (techLower.includes('python') || techLower.includes('tensorflow') || techLower.includes('keras')) return Brain;
+  if (techLower.includes('numpy') || techLower.includes('pandas') || techLower.includes('scikit')) return BarChart3;
+  if (techLower.includes('matplotlib')) return ImageIcon;
+  return Globe;
+};
 
 const ProjectsSection = () => {
   const projects = [
@@ -144,15 +178,19 @@ const ProjectsSection = () => {
                       Technologies Used
                     </h4>
                     <div className="flex flex-wrap gap-2.5">
-                      {project.technologies.map((tech, techIndex) => (
-                        <span
-                          key={techIndex}
-                          className="px-4 py-2 rounded-lg bg-primary/10 text-primary text-sm font-medium border border-primary/30 hover:bg-primary/20 hover:border-primary/50 hover:scale-105 transition-all duration-300 animate-scale-in"
-                          style={{ animationDelay: `${index * 0.2 + techIndex * 0.05}s` }}
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                      {project.technologies.map((tech, techIndex) => {
+                        const IconComponent = getTechIcon(tech);
+                        return (
+                          <span
+                            key={techIndex}
+                            className="px-4 py-2 rounded-lg bg-primary/10 text-primary text-sm font-medium border border-primary/30 hover:bg-primary/20 hover:border-primary/50 hover:scale-105 transition-all duration-300 animate-scale-in flex items-center gap-2"
+                            style={{ animationDelay: `${index * 0.2 + techIndex * 0.05}s` }}
+                          >
+                            <IconComponent className="w-4 h-4" />
+                            {tech}
+                          </span>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>

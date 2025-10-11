@@ -1,39 +1,61 @@
 import { Card } from "@/components/ui/card";
+import { 
+  Code2, 
+  Server, 
+  Braces, 
+  Database, 
+  GitBranch, 
+  Github, 
+  Cloud, 
+  Package, 
+  FileJson, 
+  Terminal,
+  Brain,
+  BarChart3,
+  Users
+} from "lucide-react";
 
 const SkillsSection = () => {
   const skillCategories = [
     {
       title: "Frontend",
+      icon: Code2,
       skills: ["Angular", "React.js", "HTML", "CSS", "JavaScript", "TypeScript"],
       color: "from-purple-400 to-pink-400",
     },
     {
       title: "Backend",
+      icon: Server,
       skills: ["Spring Boot", "Laravel", "Nest.js", "Node.js"],
       color: "from-blue-400 to-cyan-400",
     },
     {
       title: "Languages",
+      icon: Braces,
       skills: ["Java", "Python", "C", "C++", "R"],
       color: "from-green-400 to-emerald-400",
     },
     {
       title: "Databases",
+      icon: Database,
       skills: ["MySQL", "MongoDB"],
       color: "from-orange-400 to-red-400",
     },
     {
       title: "Tools & DevOps",
+      icon: Package,
       skills: ["Git", "GitHub", "GitLab", "Docker", "Jenkins", "Kubernetes", "Nexus", "SonarQube", "AWS", "Postman", "JIRA"],
       color: "from-indigo-400 to-purple-400",
     },
     {
       title: "Data & Machine Learning",
+      icon: Brain,
       skills: ["Scikit-learn", "TensorFlow", "NumPy", "Pandas", "Matplotlib"],
       color: "from-cyan-400 to-blue-400",
     },
     {
       title: "Methodologies",
+      icon: Users,
       skills: ["Scrum"],
       color: "from-pink-400 to-rose-400",
     },
@@ -59,8 +81,12 @@ const SkillsSection = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="mb-4">
-                <div className={`w-12 h-1 bg-gradient-to-r ${category.color} rounded-full mb-4`}></div>
-                <h3 className="text-xl font-bold">{category.title}</h3>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
+                    <category.icon className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold">{category.title}</h3>
+                </div>
               </div>
               
               <div className="flex flex-wrap gap-2">
