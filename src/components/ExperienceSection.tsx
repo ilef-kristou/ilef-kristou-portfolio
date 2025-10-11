@@ -7,6 +7,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import trainingDashboard from "@/assets/training-dashboard.jpg";
+import trainingManagement from "@/assets/training-management.jpg";
+import trainingAuth from "@/assets/training-auth.jpg";
+import dbSyncInterface from "@/assets/db-sync-interface.jpg";
+import dbSyncMonitoring from "@/assets/db-sync-monitoring.jpg";
 
 const ExperienceSection = () => {
   const experiences = [
@@ -26,7 +31,7 @@ const ExperienceSection = () => {
         "Resource management: association of resources with training programs, access for trainers and participants",
       ],
       technologies: ["React.js", "Laravel", "MySQL", "Authentication", "REST API", "Dashboards"],
-      images: [], // Will be populated with training center interface images
+      images: [trainingDashboard, trainingManagement, trainingAuth],
     },
     {
       role: "Database Synchronization Application",
@@ -40,7 +45,7 @@ const ExperienceSection = () => {
         "Service-oriented architecture to ensure reliability and scalability of the process",
       ],
       technologies: ["Java", "JDBC", "Web Services", "Database Synchronization"],
-      images: [], // Single interface image
+      images: [dbSyncInterface, dbSyncMonitoring]
     },
     {
       role: "Frontend Developer",
