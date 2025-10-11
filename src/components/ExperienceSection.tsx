@@ -1,10 +1,17 @@
 import { Briefcase, Calendar } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const ExperienceSection = () => {
   const experiences = [
     {
-      role: "Stagiaire Full-Stack",
+      role: "Full-Stack Intern",
       company: "TAC-TIC",
       period: "Jul - Aug 2025",
       description:
@@ -19,9 +26,24 @@ const ExperienceSection = () => {
         "Resource management: association of resources with training programs, access for trainers and participants",
       ],
       technologies: ["React.js", "Laravel", "MySQL", "Authentication", "REST API", "Dashboards"],
+      images: [], // Will be populated with training center interface images
     },
     {
-      role: "Développeuse Frontend",
+      role: "Database Synchronization Application",
+      company: "Goodwill Consulting",
+      period: "Summer 2024",
+      description:
+        "Development of a synchronization solution between two databases (source and target) via web services.",
+      features: [
+        "Automatic replication of insertions, updates, and deletions",
+        "Guarantee of data consistency and integrity between databases",
+        "Service-oriented architecture to ensure reliability and scalability of the process",
+      ],
+      technologies: ["Java", "JDBC", "Web Services", "Database Synchronization"],
+      images: [], // Single interface image
+    },
+    {
+      role: "Frontend Developer",
       company: "Startup Colibris",
       period: "Nov 2024 - Feb 2025",
       description:
@@ -35,6 +57,7 @@ const ExperienceSection = () => {
         "User/business profiles: personalized access management and activity tracking for each user",
       ],
       technologies: ["React.js", "JavaScript", "Responsive Design", "E-commerce", "UI/UX"],
+      images: [],
     },
   ];
 
@@ -54,15 +77,19 @@ const ExperienceSection = () => {
           {experiences.map((exp, index) => (
             <Card
               key={index}
-              className="glass p-8 hover:border-primary/50 transition-all duration-300 animate-slide-up hover:scale-105 hover-lift hover-glow"
+              className="glass overflow-hidden hover:border-primary/50 transition-all duration-300 animate-slide-up hover-lift hover-glow"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="w-16 h-16 rounded-xl bg-primary flex items-center justify-center flex-shrink-0 animate-pulse-glow">
-                  <Briefcase className="text-white" size={28} />
+              <div className="grid lg:grid-cols-[auto_1fr] gap-0">
+                {/* Icon Section */}
+                <div className="lg:w-24 bg-primary/10 flex items-start justify-center p-8 lg:p-6">
+                  <div className="w-16 h-16 rounded-xl bg-primary flex items-center justify-center flex-shrink-0 animate-pulse-glow">
+                    <Briefcase className="text-white" size={28} />
+                  </div>
                 </div>
 
-                <div className="flex-1 space-y-6">
+                {/* Content Section */}
+                <div className="p-8 space-y-6">
                   <div>
                     <h3 className="text-2xl font-bold mb-2">{exp.role}</h3>
                     <div className="flex flex-wrap gap-4 text-muted-foreground">
@@ -75,6 +102,29 @@ const ExperienceSection = () => {
                   </div>
 
                   <p className="text-foreground/70 leading-relaxed">{exp.description}</p>
+
+                  {/* Image Carousel - Only show if images exist */}
+                  {exp.images && exp.images.length > 0 && (
+                    <div className="relative overflow-hidden rounded-lg bg-secondary/30">
+                      <Carousel className="w-full">
+                        <CarouselContent>
+                          {exp.images.map((image, imgIndex) => (
+                            <CarouselItem key={imgIndex}>
+                              <div className="relative w-full h-[300px]">
+                                <img
+                                  src={image}
+                                  alt={`${exp.role} - Image ${imgIndex + 1}`}
+                                  className="w-full h-full object-cover rounded-lg"
+                                />
+                              </div>
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                        <CarouselPrevious className="left-4" />
+                        <CarouselNext className="right-4" />
+                      </Carousel>
+                    </div>
+                  )}
 
                   <div className="space-y-3">
                     <h4 className="text-sm font-semibold text-primary flex items-center gap-2">

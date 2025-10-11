@@ -82,7 +82,7 @@ const ProjectsSection = () => {
               className="glass border-border overflow-hidden hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 animate-scale-in group hover:-translate-y-2 hover-glow"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className={`grid lg:grid-cols-2 gap-0 items-stretch ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
+              <div className={`grid lg:grid-cols-2 gap-0 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
                 {/* Carousel Section */}
                 <div className={`relative overflow-hidden min-h-[300px] lg:min-h-[400px] bg-secondary/30 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                   <Carousel className="w-full h-full">
