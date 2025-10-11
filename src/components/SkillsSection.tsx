@@ -23,13 +23,18 @@ const SkillsSection = () => {
       color: "from-orange-400 to-red-400",
     },
     {
-      title: "Tools & Cloud",
-      skills: ["Git", "GitHub", "GitLab", "AWS", "Postman", "JIRA"],
+      title: "Tools & DevOps",
+      skills: ["Git", "GitHub", "GitLab", "Docker", "Jenkins", "Kubernetes", "Nexus", "SonarQube", "AWS", "Postman", "JIRA"],
       color: "from-indigo-400 to-purple-400",
     },
     {
+      title: "Data & Machine Learning",
+      skills: ["Scikit-learn", "TensorFlow", "NumPy", "Pandas", "Matplotlib"],
+      color: "from-cyan-400 to-blue-400",
+    },
+    {
       title: "Methodologies",
-      skills: ["Scrum", "Agile"],
+      skills: ["Scrum"],
       color: "from-pink-400 to-rose-400",
     },
   ];
