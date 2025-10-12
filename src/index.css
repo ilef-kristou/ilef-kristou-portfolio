@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 230 18% 8%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 340 70% 55%;
+    --primary: 340 75% 45%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 230 18% 12%;
@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 230 18% 15%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 345 65% 50%;
+    --accent: 345 70% 42%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -34,14 +34,14 @@ All colors MUST be HSL.
 
     --border: 230 18% 15%;
     --input: 230 18% 15%;
-    --ring: 340 70% 55%;
+    --ring: 340 75% 45%;
 
     --radius: 0.75rem;
 
     /* Custom portfolio colors */
-    --gradient-start: 340 70% 55%;
-    --gradient-end: 345 65% 50%;
-    --hero-glow: 340 70% 55%;
+    --gradient-start: 340 75% 45%;
+    --gradient-end: 345 70% 42%;
+    --hero-glow: 340 75% 45%;
   }
 
   * {
