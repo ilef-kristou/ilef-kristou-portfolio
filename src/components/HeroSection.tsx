@@ -49,14 +49,16 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-primary/50 hover:bg-primary/10 hover:scale-105 transition-all hover-glow"
-              >
-                <Download className="mr-2" size={18} />
-                Download CV
-              </Button>
+              <a href="/CV_Ilef_Kristou.pdf" download="CV_Ilef_Kristou.pdf">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-primary/50 hover:bg-primary/10 hover:scale-105 transition-all hover-glow"
+                >
+                  <Download className="mr-2" size={18} />
+                  Download CV
+                </Button>
+              </a>
             </div>
 
             <div className="flex gap-4 pt-4">
