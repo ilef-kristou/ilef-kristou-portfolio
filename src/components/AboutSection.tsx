@@ -36,22 +36,22 @@ const AboutSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-12 items-stretch">
           {/* Bio */}
           <div className="space-y-6 animate-slide-up animate-fade-in">
             <Card className="glass p-8 border-border/50 hover-lift hover-glow">
               <h3 className="text-2xl font-bold mb-4 gradient-text">My Journey</h3>
               <p className="text-foreground/80 leading-relaxed">
-                🎓 Final-year Software Engineering student, I am passionate about creating innovative software solutions, with a keen interest in full-stack web development, cloud computing, and artificial intelligence.
+                🎓 Final-year Software Engineering student passionate about full-stack development, cloud computing, and AI.
               </p>
               <p className="text-foreground/80 leading-relaxed mt-4">
-                🚀 At Optima Junior Enterprise, I contributed to real-world projects for clients, strengthening my skills in software development, agile project management, and client communication. These experiences allowed me to take on responsibilities and collaborate effectively within dynamic teams.
+                🚀 At Optima Junior Enterprise, I contributed to real client projects, enhancing my technical, teamwork, and project management skills.
               </p>
               <p className="text-foreground/80 leading-relaxed mt-4">
-                💡 My academic projects gave me the opportunity to consolidate my knowledge in software design, databases, and development best practices, while implementing these skills on various projects. I have thus acquired a comprehensive view of the software development lifecycle and a solid ability to produce reliable and high-performance solutions.
+                💡 My academic and personal projects strengthened my understanding of software design, databases, and best practices.
               </p>
               <p className="text-foreground/80 leading-relaxed mt-4">
-                🔍 Curious, rigorous, and constantly on the lookout for new technologies, I am seeking an end-of-studies internship that will allow me to apply my skills and deepen my expertise in software engineering.
+                🔍 Curious and motivated, I'm seeking an end-of-studies internship to apply and expand my expertise in software engineering.
               </p>
             </Card>
           </div>
