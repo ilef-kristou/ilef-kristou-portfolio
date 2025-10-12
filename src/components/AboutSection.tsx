@@ -44,13 +44,13 @@ const AboutSection = () => {
               <p className="text-foreground/80 leading-relaxed">
                 🎓 Final-year Software Engineering student passionate about full-stack development, cloud computing, and AI.
               </p>
-              <p className="text-foreground/80 leading-relaxed mt-4">
+              <p className="text-foreground/80 leading-relaxed mt-8">
                 🚀 At Optima Junior Enterprise, I contributed to real client projects, enhancing my technical, teamwork, and project management skills.
               </p>
-              <p className="text-foreground/80 leading-relaxed mt-4">
+              <p className="text-foreground/80 leading-relaxed mt-8">
                 💡 My academic and personal projects strengthened my understanding of software design, databases, and best practices.
               </p>
-              <p className="text-foreground/80 leading-relaxed mt-4">
+              <p className="text-foreground/80 leading-relaxed mt-8">
                 🔍 Curious and motivated, I'm seeking an end-of-studies internship to apply and expand my expertise in software engineering.
               </p>
             </Card>
