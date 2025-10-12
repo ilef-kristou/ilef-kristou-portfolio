@@ -2,6 +2,9 @@ import { Card } from "@/components/ui/card";
 import projectReservation from "@/assets/project-reservation.jpg";
 import projectAws from "@/assets/project-aws.jpg";
 import projectMl from "@/assets/project-ml.jpg";
+import crmDashboard from "@/assets/crm-dashboard.jpg";
+import crmContacts from "@/assets/crm-contacts.jpg";
+import crmDocuments from "@/assets/crm-documents.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -58,6 +61,22 @@ const ProjectsSection = () => {
       ],
       technologies: ["Angular", "Spring Boot", "Spring Security", "JWT", "MySQL"],
       images: [projectReservation, projectReservation, projectReservation],
+    },
+    {
+      title: "Modern CRM Platform",
+      year: "2024",
+      description: "A modern web-based CRM platform designed for SMEs, startups, and associations, centralizing customer data, optimizing the sales cycle, and offering clear business insights through interactive dashboards — combining simplicity, efficiency, and productivity.",
+      features: [
+        "Secure authentication and role-based access (Admin & Sales Representatives)",
+        "Centralized contact management with dynamic status tracking (prospect, client, loyal client)",
+        "Automated and visualized sales prospecting cycle",
+        "Document management system with project-based organization and filtering options",
+        "Interactive dashboard displaying key statistics and performance charts",
+        "Real-time validation and data input controls for improved accuracy",
+        "JWT-based authentication ensuring secure and stateless communication",
+      ],
+      technologies: ["Angular", "NestJS", "TypeScript", "MySQL", "JWT"],
+      images: [crmDashboard, crmContacts, crmDocuments],
     },
     {
       title: "AWS 3-Tier Cloud Architecture",

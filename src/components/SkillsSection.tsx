@@ -12,8 +12,43 @@ import {
   Terminal,
   Brain,
   BarChart3,
-  Users
+  Users,
+  Boxes,
+  Box,
+  Layers,
+  Folder,
+  Key
 } from "lucide-react";
+
+const getSkillIcon = (skill: string) => {
+  const skillLower = skill.toLowerCase();
+  if (skillLower.includes('angular')) return Code2;
+  if (skillLower.includes('react')) return Code2;
+  if (skillLower.includes('html')) return FileJson;
+  if (skillLower.includes('css')) return Layers;
+  if (skillLower.includes('javascript') || skillLower.includes('typescript')) return Braces;
+  if (skillLower.includes('spring boot') || skillLower.includes('spring')) return Server;
+  if (skillLower.includes('laravel')) return Server;
+  if (skillLower.includes('nest')) return Server;
+  if (skillLower.includes('node')) return Server;
+  if (skillLower.includes('java')) return Braces;
+  if (skillLower.includes('python')) return Brain;
+  if (skillLower.includes('c++') || skillLower === 'c') return Terminal;
+  if (skillLower.includes('r')) return BarChart3;
+  if (skillLower.includes('mysql') || skillLower.includes('mongodb')) return Database;
+  if (skillLower.includes('git')) return GitBranch;
+  if (skillLower.includes('docker')) return Box;
+  if (skillLower.includes('jenkins') || skillLower.includes('kubernetes')) return Cloud;
+  if (skillLower.includes('nexus') || skillLower.includes('sonarqube')) return Package;
+  if (skillLower.includes('aws')) return Cloud;
+  if (skillLower.includes('postman')) return Terminal;
+  if (skillLower.includes('jira')) return Folder;
+  if (skillLower.includes('scikit') || skillLower.includes('tensorflow')) return Brain;
+  if (skillLower.includes('numpy') || skillLower.includes('pandas') || skillLower.includes('matplotlib')) return BarChart3;
+  if (skillLower.includes('scrum')) return Users;
+  if (skillLower.includes('jwt')) return Key;
+  return Boxes;
+};
 
 const SkillsSection = () => {
   const skillCategories = [
@@ -90,14 +125,18 @@ const SkillsSection = () => {
               </div>
               
               <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill, skillIndex) => (
-                  <span
-                    key={skillIndex}
-                    className="px-3 py-1.5 rounded-lg bg-secondary text-foreground text-sm font-medium hover:bg-primary/20 hover:text-primary transition-colors cursor-default"
-                  >
-                    {skill}
-                  </span>
-                ))}
+                {category.skills.map((skill, skillIndex) => {
+                  const SkillIcon = getSkillIcon(skill);
+                  return (
+                    <span
+                      key={skillIndex}
+                      className="px-3 py-1.5 rounded-lg bg-secondary text-foreground text-sm font-medium hover:bg-primary/20 hover:text-primary transition-colors cursor-default flex items-center gap-1.5"
+                    >
+                      <SkillIcon className="w-3.5 h-3.5" />
+                      {skill}
+                    </span>
+                  );
+                })}
               </div>
             </Card>
           ))}
