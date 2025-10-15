@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import profilePhoto from "@/assets/profile-photo.jpg";
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -41,9 +41,14 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center text-lg font-bold animate-pulse-glow">
-            IK
-          </div>
+        <div className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center animate-pulse-glow">
+  <img
+    src={profilePhoto} // ton import de la photo
+    alt="Ilef Kristou"
+    className="w-full h-full object-cover"
+  />
+</div>
+
           <span className="text-xl font-bold">Ilef Kristou</span>
         </div>
 
