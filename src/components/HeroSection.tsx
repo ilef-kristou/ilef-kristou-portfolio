@@ -51,7 +51,7 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               
-              <a href="/CV_Ilef_Kristou.pdf" download="CV_Ilef_Kristou.pdf">
+              <a href="CV-ilef.pdf" download="CV-ilef-kristou.pdf">
                 <Button
                   variant="outline"
                   size="lg"
