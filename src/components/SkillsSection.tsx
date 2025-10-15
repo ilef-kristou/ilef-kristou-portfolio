@@ -4,49 +4,103 @@ import {
   Server, 
   Braces, 
   Database, 
-  GitBranch, 
-  Github, 
   Cloud, 
   Package, 
-  FileJson, 
-  Terminal,
-  Brain,
-  BarChart3,
-  Users,
-  Boxes,
-  Box,
-  Layers,
-  Folder,
-  Key
+  Brain, 
+  Users, 
+  Boxes 
 } from "lucide-react";
+import {
+  SiReact,
+  SiAngular,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiLaravel,
+  SiGrafana,
+  SiPrometheus,
+  SiSpringboot,
+  SiNestjs,
+  SiNodedotjs,
+  SiMysql,
+  SiMongodb,
+  SiDocker,
+  SiJenkins,
+  SiKubernetes,
+  SiGit,
+  SiGithub,
+  SiGitlab,
+  SiPostman,
+  SiJira,
+  SiTensorflow,
+  SiScikitlearn,
+  SiNumpy,
+  SiPandas,
+  SiR,
+  SiSonarqube,
+  SiC,
+  SiCplusplus,
+  SiPython,
+} from "react-icons/si";
 
 const getSkillIcon = (skill: string) => {
-  const skillLower = skill.toLowerCase();
-  if (skillLower.includes('angular')) return Code2;
-  if (skillLower.includes('react')) return Code2;
-  if (skillLower.includes('html')) return FileJson;
-  if (skillLower.includes('css')) return Layers;
-  if (skillLower.includes('javascript') || skillLower.includes('typescript')) return Braces;
-  if (skillLower.includes('spring boot') || skillLower.includes('spring')) return Server;
-  if (skillLower.includes('laravel')) return Server;
-  if (skillLower.includes('nest')) return Server;
-  if (skillLower.includes('node')) return Server;
-  if (skillLower.includes('java')) return Braces;
-  if (skillLower.includes('python')) return Brain;
-  if (skillLower.includes('c++') || skillLower === 'c') return Terminal;
-  if (skillLower.includes('r')) return BarChart3;
-  if (skillLower.includes('mysql') || skillLower.includes('mongodb')) return Database;
-  if (skillLower.includes('git')) return GitBranch;
-  if (skillLower.includes('docker')) return Box;
-  if (skillLower.includes('jenkins') || skillLower.includes('kubernetes')) return Cloud;
-  if (skillLower.includes('nexus') || skillLower.includes('sonarqube')) return Package;
-  if (skillLower.includes('aws')) return Cloud;
-  if (skillLower.includes('postman')) return Terminal;
-  if (skillLower.includes('jira')) return Folder;
-  if (skillLower.includes('scikit') || skillLower.includes('tensorflow')) return Brain;
-  if (skillLower.includes('numpy') || skillLower.includes('pandas') || skillLower.includes('matplotlib')) return BarChart3;
-  if (skillLower.includes('scrum')) return Users;
-  if (skillLower.includes('jwt')) return Key;
+  const s = skill.toLowerCase();
+
+  // Frontend
+  if (s.includes("react")) return SiReact;
+  if (s.includes("angular")) return SiAngular;
+  if (s.includes("html")) return SiHtml5;
+  if (s.includes("css")) return SiCss3;
+  if (s.includes("javascript")) return SiJavascript;
+  if (s.includes("typescript")) return SiTypescript;
+
+  // Backend
+  if (s.includes("spring")) return SiSpringboot;
+  if (s.includes("laravel")) return SiLaravel;
+  if (s.includes("nest")) return SiNestjs;
+  if (s.includes("node")) return SiNodedotjs;
+
+  // Languages
+  if (s === "java") return SiSpringboot;
+  if (s === "python") return SiPython;
+  if (s === "c") return SiC;
+  if (s === "c++") return SiCplusplus;
+  if (s === "r") return SiR;
+
+  // Databases
+  if (s.includes("mysql")) return SiMysql;
+  if (s.includes("mongodb")) return SiMongodb;
+
+  // Cloud & DevOps
+  if (s.includes("aws")) return Cloud;
+  if (s.includes("docker")) return SiDocker;
+  if (s.includes("jenkins")) return SiJenkins;
+  if (s.includes("kubernetes")) return SiKubernetes;
+  if (s.includes("nexus")) return Boxes;
+  if (s.includes("sonarqube")) return SiSonarqube;
+  if (s.includes("grafana")) return SiGrafana;
+if (s.includes("prometheus")) return SiPrometheus;
+
+
+  // Tools
+  if (s === "git") return SiGit;
+  if (s === "github") return SiGithub;
+  if (s === "gitlab") return SiGitlab;
+  if (s === "postman") return SiPostman;
+  if (s === "jira") return SiJira;
+
+  // Data & ML
+  if (s.includes("tensorflow")) return SiTensorflow;
+  if (s.includes("scikit")) return SiScikitlearn;
+  if (s.includes("numpy")) return SiNumpy;
+  if (s.includes("pandas")) return SiPandas;
+  if (s.includes("matplotlib")) return SiPython;
+
+  // Methodologies
+  if (s.includes("scrum")) return Users;
+
+  // Default
   return Boxes;
 };
 
@@ -55,7 +109,7 @@ const SkillsSection = () => {
     {
       title: "Frontend",
       icon: Code2,
-      skills: ["Angular", "React.js", "HTML", "CSS", "JavaScript", "TypeScript"],
+      skills: ["Angular", "React.js", "HTML", "CSS"],
       color: "from-purple-400 to-pink-400",
     },
     {
@@ -67,7 +121,7 @@ const SkillsSection = () => {
     {
       title: "Languages",
       icon: Braces,
-      skills: ["Java", "Python", "C", "C++", "R"],
+      skills: ["Java", "Python", "C", "C++", "JavaScript", "TypeScript", "R"],
       color: "from-green-400 to-emerald-400",
     },
     {
@@ -77,16 +131,22 @@ const SkillsSection = () => {
       color: "from-orange-400 to-red-400",
     },
     {
-      title: "Tools & DevOps",
-      icon: Package,
-      skills: ["Git", "GitHub", "GitLab", "Docker", "Jenkins", "Kubernetes", "Nexus", "SonarQube", "AWS", "Postman", "JIRA"],
-      color: "from-indigo-400 to-purple-400",
+      title: "Cloud & DevOps",
+      icon: Cloud,
+      skills: ["AWS", "Docker", "Jenkins", "Kubernetes", "Nexus", "SonarQube","Grafana", "Prometheus"],
+      color: "from-purple-400 to-pink-400",
     },
     {
       title: "Data & Machine Learning",
       icon: Brain,
-      skills: ["Scikit-learn", "TensorFlow", "NumPy", "Pandas", "Matplotlib"],
+      skills: ["TensorFlow", "Scikit-learn", "NumPy", "Pandas", "Matplotlib"],
       color: "from-cyan-400 to-blue-400",
+    },
+    {
+      title: "Tools",
+      icon: Package,
+      skills: ["Git", "GitHub", "GitLab", "Postman", "JIRA"],
+      color: "from-indigo-400 to-blue-400",
     },
     {
       title: "Methodologies",
@@ -132,7 +192,7 @@ const SkillsSection = () => {
                       key={skillIndex}
                       className="px-3 py-1.5 rounded-lg bg-secondary text-foreground text-sm font-medium hover:bg-primary/20 hover:text-primary transition-colors cursor-default flex items-center gap-1.5"
                     >
-                      <SkillIcon className="w-3.5 h-3.5" />
+                      <SkillIcon className="w-4 h-4" />
                       {skill}
                     </span>
                   );

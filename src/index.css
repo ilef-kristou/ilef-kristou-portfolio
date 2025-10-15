@@ -17,31 +17,31 @@ All colors MUST be HSL.
     --popover: 230 18% 8%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 340 75% 45%;
+    --primary: 334 100% 73%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 230 18% 12%;
     --secondary-foreground: 0 0% 95%;
 
     --muted: 230 18% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted-foreground: 0 0% 69%;
 
-    --accent: 345 70% 42%;
+    --accent: 334 100% 73%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 230 18% 15%;
+    --border: 334 35% 29%;
     --input: 230 18% 15%;
-    --ring: 340 75% 45%;
+    --ring: 327 73% 61%;
 
     --radius: 0.75rem;
 
     /* Custom portfolio colors */
-    --gradient-start: 340 75% 45%;
-    --gradient-end: 345 70% 42%;
-    --hero-glow: 340 75% 45%;
+    --gradient-start: 334 100% 73%;;
+    --gradient-end: 334 100% 73%;;
+    --hero-glow: 327 73% 61%;
   }
 
   * {

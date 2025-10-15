@@ -25,15 +25,18 @@ const Navigation = () => {
   const navItems = [
     { label: "Home", id: "home" },
     { label: "About", id: "about" },
-    { label: "Experience", id: "experience" },
     { label: "Skills", id: "skills" },
-    { label: "Projects", id: "projects" },
+    { label: "Services", id: "services" }, // Ajouté
+    { label: "Projects", id: "experience" },
+    { label: "Experience", id: "experience" },
   ];
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-card/95 backdrop-blur-xl shadow-md py-4" : "bg-card/80 backdrop-blur-sm py-6"
+        isScrolled
+          ? "bg-card/95 backdrop-blur-xl shadow-md py-4"
+          : "bg-card/80 backdrop-blur-sm py-6"
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">

@@ -7,34 +7,56 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import trainingDashboard from "@/assets/training-dashboard.jpg";
-import trainingManagement from "@/assets/training-management.jpg";
-import trainingAuth from "@/assets/training-auth.jpg";
-import dbSyncInterface from "@/assets/db-sync-interface.jpg";
-import dbSyncMonitoring from "@/assets/db-sync-monitoring.jpg";
-import { 
-  Code2, 
-  Server, 
-  Database, 
-  Shield, 
-  FileJson, 
-  LayoutDashboard,
-  Coffee,
-  Globe,
-  Lock,
-  GitBranch
-} from "lucide-react";
+
+import dashboard from "@/assets/dashboard.png";
+import gestionFormations from "@/assets/gestionFormations.png";
+import formationsForm from "@/assets/formationsForm.png";
+import planningForm from "@/assets/planningForm.png";
+import chiffre from "@/assets/chiffre.png";
+import formationsPart from "@/assets/formationsPart.png";
+import reservation1 from "@/assets/reservation1.png";
+import acceuil0 from "@/assets/acceuil0.png";
+import auth from "@/assets/auth.png";
+import sync from "@/assets/sync.png";
+
+import {
+  SiReact,
+  SiAngular,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiLaravel,
+  SiSpringboot,
+  SiNestjs,
+  SiNodedotjs,
+  SiMysql,
+  SiMongodb,
+  SiTailwindcss,
+} from "react-icons/si";
+import { Coffee, Globe, Database, FileJson } from "lucide-react";
 
 const getTechIcon = (tech: string) => {
-  const techLower = tech.toLowerCase();
-  if (techLower.includes('react') || techLower.includes('angular') || techLower.includes('html') || techLower.includes('css')) return Code2;
-  if (techLower.includes('laravel') || techLower.includes('spring') || techLower.includes('nest') || techLower.includes('node')) return Server;
-  if (techLower.includes('mysql') || techLower.includes('mongodb') || techLower.includes('database') || techLower.includes('jdbc')) return Database;
-  if (techLower.includes('auth') || techLower.includes('security')) return Shield;
-  if (techLower.includes('api') || techLower.includes('rest') || techLower.includes('web service')) return FileJson;
-  if (techLower.includes('dashboard')) return LayoutDashboard;
-  if (techLower.includes('java')) return Coffee;
-  if (techLower.includes('synchronization')) return GitBranch;
+  const t = tech.toLowerCase();
+  if (t.includes("react")) return SiReact;
+  if (t.includes("angular")) return SiAngular;
+  if (t === "html") return SiHtml5;
+  if (t === "css") return SiCss3;
+  if (t.includes("javascript")) return SiJavascript;
+  if (t.includes("typescript")) return SiTypescript;
+  if (t.includes("laravel")) return SiLaravel;
+  if (t.includes("spring")) return SiSpringboot;
+  if (t.includes("nest")) return SiNestjs;
+  if (t.includes("node")) return SiNodedotjs;
+  if (t.includes("mysql")) return SiMysql;
+  if (t.includes("mongodb")) return SiMongodb;
+  if (t === "java") return Coffee;
+  if (t.includes("javafx")) return Coffee;
+  if (t.includes("jwt")) return FileJson;
+  if (t.includes("tailwind")) return SiTailwindcss;
+  if (t.includes("rest") || t.includes("api")) return FileJson;
+  if (t.includes("hibernate")) return Database;
+  if (t.includes("sql server")) return Database;
   return Globe;
 };
 
@@ -44,8 +66,12 @@ const ExperienceSection = () => {
       role: "Full-Stack Intern",
       company: "TAC-TIC",
       period: "Jul - Aug 2025",
-      description:
-        "Development of a web application for managing a training center. Objective: Optimize the management of training center activities through a centralized platform, enabling administrators, training managers, trainers, and participants to manage the entire training lifecycle intuitively and efficiently.",
+      description: (
+        <>
+          Development of a web application for managing a training center.<br />
+          <strong>Objective:</strong> Optimize the management of training center activities through a centralized platform, enabling administrators, training managers, trainers, and participants to manage the entire training lifecycle intuitively and efficiently.
+        </>
+      ),
       features: [
         "Administrative dashboard: overview of key statistics for quick and efficient monitoring",
         "Authentication and user management: secure registration and login, role management (administrator, training manager, trainer, participant), user profiles",
@@ -55,22 +81,9 @@ const ExperienceSection = () => {
         "Room and schedule management: creation and management of rooms with capacity, assignment to sessions, availability verification",
         "Resource management: association of resources with training programs, access for trainers and participants",
       ],
-      technologies: ["React.js", "Laravel", "MySQL", "Authentication", "REST API", "Dashboards"],
-      images: [trainingDashboard, trainingManagement, trainingAuth],
-    },
-    {
-      role: "Database Synchronization Application",
-      company: "Goodwill Consulting",
-      period: "Summer 2024",
-      description:
-        "Development of a synchronization solution between two databases (source and target) via web services.",
-      features: [
-        "Automatic replication of insertions, updates, and deletions",
-        "Guarantee of data consistency and integrity between databases",
-        "Service-oriented architecture to ensure reliability and scalability of the process",
-      ],
-      technologies: ["Java", "JDBC", "Web Services", "Database Synchronization"],
-      images: [dbSyncInterface, dbSyncMonitoring]
+      technologies: ["React.js", "Laravel", "MySQL", "JWT", "REST API"],
+      images: [acceuil0, chiffre, dashboard, gestionFormations, formationsForm, planningForm, reservation1, formationsPart],
+      link: "https://tac-tic.net/",
     },
     {
       role: "Frontend Developer",
@@ -86,9 +99,25 @@ const ExperienceSection = () => {
         "Appointment scheduling: development of a simple and interactive interface for businesses",
         "User/business profiles: personalized access management and activity tracking for each user",
       ],
-      technologies: ["React.js", "JavaScript", "Responsive Design", "E-commerce", "UI/UX"],
+      technologies: ["React.js", "JavaScript", "Tailwind"],
       images: [],
+      link: "https://www.facebook.com/colibristunisie",
     },
+    {
+      role: "Database Synchronization Application",
+      company: "Goodwill Consulting",
+      period: "Juin - Juil 2024",
+      description:
+        "Development of a synchronization solution between two databases (source and target) via web services.",
+      features: [
+        "Automatic replication of insertions, updates, and deletions",
+        "Guarantee of data consistency and integrity between databases",
+        "Service-oriented architecture to ensure reliability and scalability of the process",
+      ],
+      technologies: ["Java", "JavaFX", "JDBC", "Hibernate", "REST API", "SQL Server"],
+      images: [auth,sync],
+      link: "https://goodwill.tn",
+    }
   ];
 
   return (
@@ -107,8 +136,8 @@ const ExperienceSection = () => {
           {experiences.map((exp, index) => (
             <Card
               key={index}
-              className="glass overflow-hidden hover:border-primary/50 transition-all duration-300 animate-slide-up hover-lift hover-glow"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group glass overflow-hidden hover:border-primary/50 transition-all duration-300 animate-slide-up hover-lift hover-glow"
+              style={{ animationDelay: `${index * 0.08}s` }}
             >
               <div className="grid lg:grid-cols-[auto_1fr] gap-0">
                 {/* Icon Section */}
@@ -121,9 +150,22 @@ const ExperienceSection = () => {
                 {/* Content Section */}
                 <div className="p-8 space-y-6">
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">{exp.role}</h3>
+                    <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors duration-300">
+                      {exp.role}
+                    </h3>
                     <div className="flex flex-wrap gap-4 text-muted-foreground">
-                      <span className="font-medium text-primary">{exp.company}</span>
+                      {exp.link ? (
+                        <a
+                          href={exp.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-medium text-primary hover:underline"
+                        >
+                          {exp.company}
+                        </a>
+                      ) : (
+                        <span className="font-medium text-primary">{exp.company}</span>
+                      )}
                       <span className="flex items-center gap-2">
                         <Calendar size={16} />
                         {exp.period}
@@ -133,29 +175,32 @@ const ExperienceSection = () => {
 
                   <p className="text-foreground/70 leading-relaxed">{exp.description}</p>
 
-                  {/* Image Carousel - Only show if images exist */}
+                  {/* Image Carousel */}
                   {exp.images && exp.images.length > 0 && (
                     <div className="relative overflow-hidden rounded-lg bg-secondary/30">
                       <Carousel className="w-full">
                         <CarouselContent>
                           {exp.images.map((image, imgIndex) => (
                             <CarouselItem key={imgIndex}>
-                              <div className="relative w-full h-[300px]">
-                                <img
-                                  src={image}
-                                  alt={`${exp.role} - Image ${imgIndex + 1}`}
-                                  className="w-full h-full object-cover rounded-lg"
-                                />
+                              <div className="relative w-full">
+                                <div className="aspect-video w-full max-w-4xl mx-auto">
+                                  <img
+                                    src={image}
+                                    alt={`${exp.role} - Image ${imgIndex + 1}`}
+                                    className="w-full h-full object-contain rounded-lg"
+                                  />
+                                </div>
                               </div>
                             </CarouselItem>
                           ))}
                         </CarouselContent>
-                        <CarouselPrevious className="left-4" />
-                        <CarouselNext className="right-4" />
+                        <CarouselPrevious className="left-2 sm:left-4 size-8 sm:size-10" />
+                        <CarouselNext className="right-2 sm:right-4 size-8 sm:size-10" />
                       </Carousel>
                     </div>
                   )}
 
+                  {/* Features */}
                   <div className="space-y-3">
                     <h4 className="text-sm font-semibold text-primary flex items-center gap-2">
                       <span className="w-1 h-5 bg-primary rounded-full"></span>
@@ -163,8 +208,8 @@ const ExperienceSection = () => {
                     </h4>
                     <ul className="space-y-2 ml-4">
                       {exp.features.map((feature, featureIndex) => (
-                        <li 
-                          key={featureIndex} 
+                        <li
+                          key={featureIndex}
                           className="flex items-start gap-3 text-foreground/80 text-sm leading-relaxed animate-fade-in"
                           style={{ animationDelay: `${index * 0.1 + featureIndex * 0.05}s` }}
                         >
@@ -175,6 +220,7 @@ const ExperienceSection = () => {
                     </ul>
                   </div>
 
+                  {/* Technologies */}
                   <div className="space-y-3 pt-4 border-t border-border/50">
                     <h4 className="text-xs font-semibold text-primary uppercase tracking-wider flex items-center gap-2">
                       <span className="w-6 h-0.5 bg-primary"></span>
