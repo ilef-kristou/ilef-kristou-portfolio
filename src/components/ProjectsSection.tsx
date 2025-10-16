@@ -81,15 +81,19 @@ const getTechIcon = (tech: string) => {
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Online Reservation System",
+      title: "Online Reservation System For Restaurants",
       year: "2024",
       description:
-        "Web application designed to streamline the reservation process with multi-user capabilities, featuring robust authentication and an intuitive rating system for enhanced user experience.",
+        "Web application designed to streamline restaurant bookings with multi-user capabilities, featuring an intuitive review and rating system for enhanced user experience.",
       features: [
-        "Multi-user management with role-based access control",
-        "Rating and review system for user feedback",
-        "Secure authentication using JWT tokens",
-        "MySQL database for efficient data management",
+        "Role-Based Access Control – Distinct access for Admin, Business, and User roles to ensure secure and appropriate interactions.",
+        "Admin Dashboard – Full control over platform operations, user management, and oversight customer reviews, with the ability to manage and moderate reviews.",
+        "Restaurant Business Space – Enables restaurants to manage menus, update content, and view, accept and reject bookings.",
+        "User-Friendly Reservation Feature – Seamless booking experience for users with real-time availability.",
+        "Customer Review & Rating Feature – Users can leave ratings and reviews, allowing restaurants to track feedback and improve services.",
+        "Secure Authentication – Strong login and session management for all users.",
+        " Real-Time Booking Management – Up-to-date reservation tracking for both users and restaurants",
+
       ],
       technologies: ["Angular", "TypeScript", "Spring Boot", "Spring Security", "JWT", "MySQL"],
       images: [unnamed2, unnamed1, unnamed, unnamed3, unnamed8, unnamed4, unnamed10, unnamed5, unnamed7, unnamed6],
@@ -98,16 +102,15 @@ const ProjectsSection = () => {
       title: "Modern CRM Platform",
       year: "2024",
       description:
-        "A modern web-based CRM platform designed for SMEs, startups, and associations, centralizing customer data, optimizing the sales cycle, and offering clear business insights through interactive dashboards.",
+        "A modern web-based CRM platform designed for a specific user within a business (SME, startup, or association). It centralizes contact data, optimizes the prospecting cycle, and offers clear business insights through interactive dashboards.",
       features: [
-        "Secure authentication and role-based access (Admin & Sales Representatives)",
-        "Centralized contact management with dynamic status tracking",
-        "Automated and visualized sales prospecting cycle",
+        "Secure authentication for the business owner",
+        "Centralized contact management with dynamic status tracking (e.g., prospect, customer)",
+        "Guided and visualized prospecting cycle with step-by-step tracking",
         "Document management system with project-based organization and filtering options",
-        "Interactive dashboard displaying key statistics and performance charts",
-        "JWT-based authentication ensuring secure and stateless communication",
+        "Interactive dashboard displaying key statistics and contact evolution",
       ],
-      technologies: ["Angular", "NestJS", "TypeScript", "MySQL", "JWT"],
+      technologies: ["Angular", "NestJS", "TypeScript", "MySQL"],
       images: [crm, crm2, crm1, crm8, crm6, crm7],
     },
     {
