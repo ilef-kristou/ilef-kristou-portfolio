@@ -81,7 +81,7 @@ const getTechIcon = (tech: string) => {
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Online Reservation System For Restaurants",
+      title: "Online Reservation & Rating System for Restaurants",
       year: "2024",
       description:
         "Web application designed to streamline restaurant bookings with multi-user capabilities, featuring an intuitive review and rating system for enhanced user experience.",
