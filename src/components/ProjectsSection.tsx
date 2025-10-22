@@ -92,7 +92,7 @@ const ProjectsSection = () => {
         "User-Friendly Reservation Feature – Seamless booking experience for users with real-time availability.",
         "Customer Review & Rating Feature – Users can leave ratings and reviews, allowing restaurants to track feedback and improve services.",
         "Secure Authentication – Strong login and session management for all users.",
-        " Real-Time Booking Management – Up-to-date reservation tracking for both users and restaurants",
+        " Real-Time Booking Management – Up-to-date reservation tracking for both users and restaurants.",
 
       ],
       technologies: ["Angular", "TypeScript", "Spring Boot", "Spring Security", "JWT", "MySQL"],
