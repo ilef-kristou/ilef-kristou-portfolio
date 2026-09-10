@@ -29,13 +29,17 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-white font-medium">
-  <span className="font-bold">Full-Stack Developer</span> <span className="text-white">|</span> <span className="font-bold">AI & Cloud Innovator</span>
+  <span className="font-bold">Software Engineer</span>{" "}
+  <span className="text-white">|</span>{" "}
+  <span className="font-bold">Full-Stack Developer</span>{" "}
+  <span className="text-white">|</span>{" "}
+  <span className="font-bold">DevOps & Cloud </span>
 </p>
 
 
             
             <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-            Final-year <strong>software engineering</strong> student, developing <strong>full-stack web applications</strong> using <strong>modern technologies</strong>, from <strong>concept to deployment</strong>, building <strong>reliable</strong> and <strong>high-performing solutions</strong> with <strong>cloud deployment experience</strong> and a solid foundation in <strong>artificial intelligence</strong>.
+  <strong>Software Engineer</strong> developing <strong>full-stack web applications</strong> using <strong>modern technologies</strong>, from <strong>concept to deployment</strong>, building <strong>reliable</strong> and <strong>high-performing solutions</strong> with experience in <strong>Cloud and DevOps practices</strong> and a solid foundation in <strong>artificial intelligence</strong>.
 </p>
 
 

@@ -15,33 +15,37 @@ const AboutSection = () => {
         </div>
 
         <div className="max-w-3xl mx-auto animate-slide-up animate-fade-in">
-          <Card className="glass p-8 border-border/50 hover-lift hover-glow">
-            <p className="text-foreground/80 leading-relaxed mb-4">
-              Final-year <strong>Software Engineering</strong> student with a passion for <strong>full-stack development</strong>, <strong>cloud computing</strong>, and <strong>AI</strong>.
-            </p>
-            <p className="text-foreground/80 leading-relaxed mb-4">
-  Gained hands-on experience at{" "}
-  <a
-    href="https://optimaje.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-primary font-semibold hover:underline"
-  >
-    Optima Junior Enterprise
-  </a>
-  , contributing to real client projects and strengthening{" "}
-  <strong>technical skills</strong>, <strong>teamwork</strong>, and{" "}
-  <strong>project management</strong>.
-</p>
+  <Card className="glass p-8 border-border/50 hover-lift hover-glow">
+    <p className="text-foreground/80 leading-relaxed mb-4">
+      <strong>Software Engineer</strong> with a strong focus on{" "}
+      <strong>Full-Stack Development and DevOps</strong>, passionate about
+      turning ideas into <strong>practical and impactful software solutions</strong>.
+    </p>
 
-            <p className="text-foreground/80 leading-relaxed mb-4">
-              Academic and personal projects helped me build a solid understanding of <strong>software design</strong>, <strong>databases</strong>, and <strong>best practices</strong>.
-            </p>
-            <p className="text-foreground/80 leading-relaxed">
-              I am actively seeking p<strong>rofessional opportunities </strong>that allow me to leverage my <strong>skills</strong> while continuing to grow.
-            </p>
-          </Card>
-        </div>
+    <p className="text-foreground/80 leading-relaxed mb-4">
+      My experience includes <strong>web application development</strong>,{" "}
+      <strong>software architecture</strong>, <strong>CI/CD</strong>,{" "}
+      <strong>cloud environments</strong>, and{" "}
+      <strong>AI-powered solutions</strong>, allowing me to work across
+      different stages of the software development lifecycle.
+    </p>
+
+    <p className="text-foreground/80 leading-relaxed mb-4">
+      Through my academic and professional projects, I’ve had the opportunity
+      to work on <strong>real-world applications</strong>, explore modern
+      technologies, and develop a strong approach to{" "}
+      <strong>problem-solving</strong>, <strong>collaboration</strong>, and{" "}
+      <strong>continuous learning</strong>.
+    </p>
+
+    <p className="text-foreground/80 leading-relaxed">
+      Currently seeking a <strong>professional opportunity</strong> where I
+      can apply my <strong>technical expertise</strong>, contribute to{" "}
+      <strong>ambitious projects</strong>, and help build{" "}
+      <strong>innovative, high-impact technology solutions</strong>.
+    </p>
+  </Card>
+</div>
       </div>
     </section>
   );

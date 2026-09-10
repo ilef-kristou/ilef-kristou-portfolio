@@ -11,7 +11,10 @@ import {
   Boxes 
 } from "lucide-react";
 import {
+  SiNextdotjs,
+  SiN8N,
   SiReact,
+  SiPostgresql,
   SiAngular,
   SiHtml5,
   SiCss3,
@@ -49,6 +52,7 @@ const getSkillIcon = (skill: string) => {
 
   // Frontend
   if (s.includes("react")) return SiReact;
+  if (s.includes("next")) return SiNextdotjs;
   if (s.includes("angular")) return SiAngular;
   if (s.includes("html")) return SiHtml5;
   if (s.includes("css")) return SiCss3;
@@ -68,9 +72,10 @@ const getSkillIcon = (skill: string) => {
   if (s === "c++") return SiCplusplus;
   if (s === "r") return SiR;
 
-  // Databases
   if (s.includes("mysql")) return SiMysql;
-  if (s.includes("mongodb")) return SiMongodb;
+if (s.includes("postgresql") || s.includes("postgres")) return SiPostgresql;
+if (s.includes("sql server") || s.includes("sqlserver")) return Database;
+if (s.includes("mongodb")) return SiMongodb;
 
   // Cloud & DevOps
   if (s.includes("aws")) return Cloud;
@@ -79,12 +84,14 @@ const getSkillIcon = (skill: string) => {
   if (s.includes("kubernetes")) return SiKubernetes;
   if (s.includes("nexus")) return Boxes;
   if (s.includes("sonarqube")) return SiSonarqube;
+  if (s.includes("trivy")) return Boxes;
   if (s.includes("grafana")) return SiGrafana;
 if (s.includes("prometheus")) return SiPrometheus;
 
 
   // Tools
   if (s === "git") return SiGit;
+  if (s === "n8n") return SiN8N;
   if (s === "github") return SiGithub;
   if (s === "gitlab") return SiGitlab;
   if (s === "postman") return SiPostman;
@@ -109,7 +116,7 @@ const SkillsSection = () => {
     {
       title: "Frontend",
       icon: Code2,
-      skills: ["Angular", "React.js", "HTML", "CSS"],
+      skills: ["Angular", "React.js", "Next.js", "HTML", "CSS"],
       color: "from-purple-400 to-pink-400",
     },
     {
@@ -125,15 +132,15 @@ const SkillsSection = () => {
       color: "from-green-400 to-emerald-400",
     },
     {
-      title: "Databases",
-      icon: Database,
-      skills: ["MySQL", "MongoDB"],
-      color: "from-orange-400 to-red-400",
-    },
+  title: "Databases",
+  icon: Database,
+  skills: ["MySQL", "PostgreSQL", "SQL Server", "MongoDB"],
+  color: "from-orange-400 to-red-400",
+},
     {
       title: "Cloud & DevOps",
       icon: Cloud,
-      skills: ["AWS", "Docker", "Jenkins", "Kubernetes", "Nexus", "SonarQube","Grafana", "Prometheus"],
+      skills: ["AWS", "Docker", "Jenkins", "Kubernetes", "Nexus", "SonarQube", "Trivy", "Grafana", "Prometheus"],
       color: "from-purple-400 to-pink-400",
     },
     {
@@ -145,7 +152,7 @@ const SkillsSection = () => {
     {
       title: "Tools",
       icon: Package,
-      skills: ["Git", "GitHub", "GitLab", "Postman", "JIRA"],
+      skills: ["Git", "GitHub", "GitLab", "n8n", "Postman", "JIRA"],
       color: "from-indigo-400 to-blue-400",
     },
     {
