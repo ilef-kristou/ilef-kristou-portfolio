@@ -18,6 +18,36 @@ import reservation1 from "@/assets/reservation1.png";
 import acceuil0 from "@/assets/acceuil0.png";
 import auth from "@/assets/auth.png";
 import sync from "@/assets/sync.png";
+import inscri_patient from "@/assets/inscri_patient.png";
+import liste_utilisateurs from "@/assets/liste_utilisateurs.png";
+import details_utilisateurs from "@/assets/details_utilisateurs.png";
+import modifier_profil from "@/assets/modifier_profil.png";
+import filtre_docs from "@/assets/filtre_docs.png";
+import ajout_doc from "@/assets/ajout_doc.png";
+import visualiser_doc from "@/assets/visualiser_doc.png";
+import generer_code from "@/assets/generer_code.png";
+import liste_access from "@/assets/listeacces.png";
+import mail_qrcode from "@/assets/mail-qrcode.png";
+import dispo1 from "@/assets/dispo1.png";
+import recherchemedecin from "@/assets/recherchemedecin.png";
+import details_medecin from "@/assets/details_medecin.png";
+import prendre_rdv from "@/assets/prendre_rdv.png";
+import confirme_rdv from "@/assets/confirme_rdv.png";
+import patients_today from "@/assets/patients-today.png";
+import consultationdossier from "@/assets/consultationdossier.png";
+import modif_doc_medecin from "@/assets/modif_doc_medecin.png";
+import listedossier from "@/assets/listedossier.png";
+import ajout_doc_prestataire from "@/assets/ajout_doc_prestataire.png";
+import interaction_medicamenteux from "@/assets/interaction-medicamenteux.png";
+import maladie_chronique from "@/assets/maladie-chronique.png";
+import aucune_contre_indication from "@/assets/aucune-contre-indication.png";
+import dashbordssss from "@/assets/dashboardssss.png";
+import urgence_patient1 from "@/assets/urgence-patient1.png";
+import chatbot_patient4 from "@/assets/chatbot-patient4.png";
+import chatbot_patient5 from "@/assets/chatbot-patient5.png";
+import pipeline1 from "@/assets/pipeline1.png";
+import pipeline2 from "@/assets/pipeline2.png";
+
 
 import {
   SiReact,
@@ -33,57 +63,157 @@ import {
   SiMysql,
   SiMongodb,
   SiTailwindcss,
+  SiNextdotjs,
+  SiPostgresql,
+  SiJenkins,
+  SiSonarqube,
+  SiDocker,
+  SiPrometheus,
+  SiGrafana,
 } from "react-icons/si";
-import { Coffee, Globe, Database, FileJson } from "lucide-react";
+
+import {
+  Coffee,
+  Globe,
+  Database,
+  FileJson,
+  GitBranch,
+  Brain,
+  Workflow,
+  ShieldCheck,
+  Package,
+  Activity,
+} from "lucide-react";
 
 const getTechIcon = (tech: string) => {
   const t = tech.toLowerCase();
+
+  // Frontend
   if (t.includes("react")) return SiReact;
   if (t.includes("angular")) return SiAngular;
+  if (t.includes("next")) return SiNextdotjs;
   if (t === "html") return SiHtml5;
   if (t === "css") return SiCss3;
   if (t.includes("javascript")) return SiJavascript;
   if (t.includes("typescript")) return SiTypescript;
-  if (t.includes("laravel")) return SiLaravel;
+  if (t.includes("tailwind")) return SiTailwindcss;
+
+  // Backend
   if (t.includes("spring")) return SiSpringboot;
+  if (t.includes("laravel")) return SiLaravel;
   if (t.includes("nest")) return SiNestjs;
   if (t.includes("node")) return SiNodedotjs;
+
+  // Database
+  if (t.includes("postgresql")) return SiPostgresql;
   if (t.includes("mysql")) return SiMysql;
   if (t.includes("mongodb")) return SiMongodb;
-  if (t === "java") return Coffee;
-  if (t.includes("javafx")) return Coffee;
-  if (t.includes("jwt")) return FileJson;
-  if (t.includes("tailwind")) return SiTailwindcss;
-  if (t.includes("rest") || t.includes("api")) return FileJson;
-  if (t.includes("hibernate")) return Database;
   if (t.includes("sql server")) return Database;
+  if (t.includes("hibernate")) return Database;
+
+  // Java / API / Security
+  if (t === "java" || t.includes("javafx")) return Coffee;
+  if (t.includes("jwt")) return FileJson;
+  if (t.includes("rest") || t.includes("api")) return FileJson;
+
+  // AI
+  if (t === "rag") return Brain;
+  if (t === "llm") return Brain;
+
+  // Workflow / Automation
+  if (t.includes("n8n")) return Workflow;
+
+  // CI/CD & DevOps
+  if (t.includes("ci/cd")) return GitBranch;
+  if (t.includes("jenkins")) return SiJenkins;
+  if (t.includes("docker")) return SiDocker;
+  if (t.includes("nexus")) return Package;
+  if (t.includes("sonarqube")) return SiSonarqube;
+
+  // Monitoring
+  if (t.includes("grafana")) return SiGrafana;
+  if (t.includes("prometheus")) return SiPrometheus;
+
+  // Security
+  if (t.includes("trivy")) return ShieldCheck;
+
+  // Fallback
   return Globe;
 };
 
 const ExperienceSection = () => {
   const experiences = [
-    {
-      role: "Full-Stack Intern",
-      company: "TAC-TIC",
-      period: "Jul - Aug 2025",
+    { 
+      role: "Software Engineer Intern – Full-Stack, AI & DevOps",
+      company: "Talan Tunisia",
+      period: "Feb - Mai 2026",
       description: (
         <>
-          Development of a web application for managing a training center.<br />
-          <strong>Objective:</strong> Optimize the management of training center activities through a centralized platform, enabling administrators, training managers, trainers, and participants to manage the entire training lifecycle intuitively and efficiently.
+          Development of an intelligent web application for optimizing the patient journey.<br />
+          <strong>Objective:</strong> Design and development of a centralized healthcare platform connecting patients, doctors, medical providers, while leveraging AI to support medical orientation and decision-making.
         </>
       ),
       features: [
-        "Administrative dashboard: overview of key statistics for quick and efficient monitoring",
-        "Authentication and user management: secure registration and login, role management (administrator, training manager, trainer, participant), user profiles",
-        "Training management: creation, modification, deletion of training programs, trainer assignment, session scheduling (date, time, room)",
-        "Participant registrations: online registration, validation by training manager, registration status tracking",
-        "Trainer management: consultation and management of assigned training sessions",
-        "Room and schedule management: creation and management of rooms with capacity, assignment to sessions, availability verification",
-        "Resource management: association of resources with training programs, access for trainers and participants",
+        "Medical record management: Centralized management and secure sharing of patient medical records via QR Code",
+        "Medical appointments: Appointment scheduling and management for both patients and doctors, including appointment requests, confirmation, and cancellation",
+        "Notifications & alerts: Automated notifications and alerts to keep users informed about important updates, appointments, and medical events",
+        "Dashboards: Dedicated dashboards providing users with a clear overview of their activities and relevant information based on their role",
+        "User registration management: Administration of registration requests from doctors and medical providers, with the ability to approve or reject applications",
+        "AI-powered medical orientation: Intelligent chatbot that analyzes patient symptoms, assesses urgency, guides patients toward appropriate care facilities, and assists with appointment scheduling",
+        "Medication risk analysis: Detection of drug-drug interactions and potential contraindications based on the patient's medical profile, including allergies and chronic conditions",
+        "RAG-based medical assistant: Intelligent assistant allowing doctors to query and retrieve relevant information from patients' medical documents and records",
+        "DevOps & CI/CD: Implementation of automated CI/CD pipelines covering source code checkout, project build, unit testing, code quality analysis, artifact management, Docker image creation, and application deployment",
       ],
-      technologies: ["React.js", "Laravel", "MySQL", "JWT", "REST API"],
-      images: [acceuil0, chiffre, dashboard, gestionFormations, formationsForm, planningForm, reservation1, formationsPart],
-      link: "https://tac-tic.net/",
+technologies: [
+  "Next.js",
+  "Spring Boot",
+  "PostgreSQL",
+  "JWT",
+  "REST API",
+  "n8n",
+  "RAG",
+  "LLM",
+  "CI/CD",
+  "Jenkins",
+  "Nexus",
+  "SonarQube",
+  "Grafana",
+  "Prometheus",
+  "Trivy",
+  "Docker",
+  "Docker Hub",
+],
+images: [
+  inscri_patient,
+  liste_utilisateurs,
+  details_utilisateurs,
+  dashbordssss,
+  filtre_docs,
+  ajout_doc,
+  visualiser_doc,
+  generer_code,
+  liste_access,
+  mail_qrcode,
+  modifier_profil,
+  dispo1,
+  recherchemedecin,
+  details_medecin,
+  prendre_rdv,
+  confirme_rdv,
+  patients_today,
+  consultationdossier,
+  modif_doc_medecin,
+  listedossier,
+  ajout_doc_prestataire,
+  interaction_medicamenteux,
+  maladie_chronique,
+  aucune_contre_indication,
+  urgence_patient1,
+  chatbot_patient4,
+  chatbot_patient5,
+  pipeline1,
+  pipeline2
+],      link: "https://www.talan.com/global/fr",
     },
     {
       role: "Full-Stack Developer",
