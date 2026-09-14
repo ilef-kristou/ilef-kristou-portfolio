@@ -216,6 +216,29 @@ images: [
 ],      link: "https://www.talan.com/global/fr",
     },
     {
+      role: "Full-Stack Intern",
+      company: "TAC-TIC",
+      period: "Jul - Aug 2025",
+      description: (
+        <>
+          Development of a web application for managing a training center.<br />
+          <strong>Objective:</strong> Optimize the management of training center activities through a centralized platform, enabling administrators, training managers, trainers, and participants to manage the entire training lifecycle intuitively and efficiently.
+        </>
+      ),
+      features: [
+        "Administrative dashboard: overview of key statistics for quick and efficient monitoring",
+        "Authentication and user management: secure registration and login, role management (administrator, training manager, trainer, participant), user profiles",
+        "Training management: creation, modification, deletion of training programs, trainer assignment, session scheduling (date, time, room)",
+        "Participant registrations: online registration, validation by training manager, registration status tracking",
+        "Trainer management: consultation and management of assigned training sessions",
+        "Room and schedule management: creation and management of rooms with capacity, assignment to sessions, availability verification",
+        "Resource management: association of resources with training programs, access for trainers and participants",
+      ],
+      technologies: ["React.js", "Laravel", "MySQL", "JWT", "REST API"],
+      images: [acceuil0, chiffre, dashboard, gestionFormations, formationsForm, planningForm, reservation1, formationsPart],
+      link: "https://tac-tic.net/",
+    },
+    {
       role: "Full-Stack Developer",
       company: "Startup Colibris",
       period: "Nov 2024 - Feb 2025",
